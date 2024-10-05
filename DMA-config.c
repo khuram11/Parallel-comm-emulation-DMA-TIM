@@ -34,6 +34,7 @@ void Parallel_Transmit_DMA_TIM(uint8_t *SrcBuff, volatile uint32_t *GPIO_ODR,
 
 	// Enable the DMA stream
 	DMA2_Stream1->CR |= 1;
+	//enable DMA request for timer on CC1DE
 	TIM1->DIER |= 0b1 << 9;
 
 }
